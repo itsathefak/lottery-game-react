@@ -1,6 +1,7 @@
-import "./TicketNum.css"
+import "./TicketNum.css";
 
-export default function TicketNum({num}){
-    return <span className="TicketNum">{num}</span>;
-
+export default function TicketNum({ num, spinning }) {
+  return (
+    <span className={`TicketNum ${spinning ? "spinning" : ""}`}>{num}</span>
+  );
 }

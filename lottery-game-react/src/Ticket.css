@@ -1,5 +1,22 @@
 .ticket {
-    border: 1px solid pink;
-    border-radius: 14px;
-    width: 300px;
+    border-radius: 16px;
+    padding: 1.5rem;
+    width: 320px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ticket:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #3d405b;
+    margin-bottom: 1rem;
 }

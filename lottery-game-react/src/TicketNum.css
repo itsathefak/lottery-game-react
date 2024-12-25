@@ -1,3 +1,47 @@
 .TicketNum {
-    font-size: 3rem;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin: 0.5rem;
+    line-height: 60px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-radius: 50%;
+    color: white;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.TicketNum.spinning {
+    animation: bounce-spin 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+}
+
+.TicketNum:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+}
+
+/* New animation for spinning */
+@keyframes bounce-spin {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    25% {
+        transform: scale(1.1) rotate(90deg);
+    }
+
+    50% {
+        transform: scale(1) rotate(180deg);
+    }
+
+    75% {
+        transform: scale(0.9) rotate(270deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
 }

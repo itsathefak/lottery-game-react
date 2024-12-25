@@ -1,13 +1,13 @@
-import TicketNum from "./TicketNum.jsx"
-import "./Ticket.css"
+import TicketNum from "./TicketNum.jsx";
+import "./Ticket.css";
 
-export default function Ticket({ticket}){
-    return(
-        <div className="ticket">
-            <p>Ticket</p>
-            {ticket.map((num, idx) => (
-                <TicketNum num={num} key={idx}/>
-            ))}
-        </div>
-    )
+export default function Ticket({ ticket, spinning }) {
+  return (
+    <div className="ticket">
+      <p>Ticket</p>
+      {ticket.map((num, idx) => (
+        <TicketNum num={num} key={idx} spinning={spinning} />
+      ))}
+    </div>
+  );
 }
